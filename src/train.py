@@ -6,6 +6,9 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.impute import SimpleImputer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, f1_score, classification_report, confusion_matrix
+from sklearn.metrics import ConfusionMatrixDisplay
+import matplotlib.pyplot as plt
+from pathlib import Path
 
 
 # -----------------------------
@@ -124,7 +127,6 @@ def build_model(numeric_features, categorical_features) -> Pipeline:
 
 def main():
     # Load data
-    from pathlib import Path
     BASE_DIR = Path(__file__).resolve().parents[1]
     DATA_DIR = BASE_DIR / "data"
 

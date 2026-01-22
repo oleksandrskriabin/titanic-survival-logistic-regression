@@ -98,6 +98,28 @@ The public leaderboard score closely matches validation performance, indicating 
 
 ---
 
+### Classification Report (Validation)
+```
+          precision    recall  f1-score   support
+
+       0       0.84      0.89      0.87       110
+       1       0.81      0.74      0.77        69
+
+accuracy                           0.83       179 
+macro avg      0.83      0.82      0.82       179
+weighted avg   0.83      0.83      0.83       179
+```
+
+---
+
+### Confusion Matrix (Validation)
+
+```
+ [[98 12]
+ [18 51]]
+```
+---
+
 ## Conclusion
 
 Logistic regression provided a stable, interpretable, and well-generalizing solution for this dataset.
