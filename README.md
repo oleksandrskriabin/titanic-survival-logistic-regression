@@ -107,6 +107,35 @@ Further model complexity was intentionally avoided, as expected gains were margi
 
 ## How to Run
 
-Run training and generate submission:
-```bash
+See the Reproducibility section below for full setup instructions.
+
+---
+
+## Reproducibility
+
+To reproduce the results:
+
+1. Download `train.csv` and `test.csv` from the Kaggle Titanic competition:  
+   https://www.kaggle.com/competitions/titanic
+
+2. Place the files in the `data/` directory:
+
+```
+data/
+├── train.csv
+└── test.csv
+```
+
+3. Install dependencies:
+```
+pip install -r requirements.txt
+```
+
+4. Run training and generate the submission:
+```
 python src/train.py
+```
+The script will train the model and generate a submission file:
+```
+submission.csv
+```
