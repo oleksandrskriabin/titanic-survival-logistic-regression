@@ -124,8 +124,12 @@ def build_model(numeric_features, categorical_features) -> Pipeline:
 
 def main():
     # Load data
-    train_df = pd.read_csv("/Kaggle/Titanic/train.csv")
-    test_df = pd.read_csv("/Kaggle/Titanic/test.csv")
+    from pathlib import Path
+    BASE_DIR = Path(__file__).resolve().parents[1]
+    DATA_DIR = BASE_DIR / "data"
+
+    train_df = pd.read_csv(DATA_DIR / "train.csv")
+    test_df = pd.read_csv(DATA_DIR / "test.csv")
 
     # Feature engineering
     train_df, test_df = prepare_features(train_df, test_df)
